@@ -443,3 +443,77 @@ footer {
     font-size: 2.5rem;
 }
 
+
+/* Estilo para telas menores (celulares) */
+@media (max-width: 768px) { 
+    #sobre, #experiencia, #formacao, #servicos, #depoimentos {
+        max-width: 95%; /* Ajuste a largura do conteúdo para 95% da tela */
+    }
+    
+    .timeline-container {
+        flex-direction: column; /* Organize os itens da linha do tempo em colunas */
+        align-items: center; /* Centralize os itens na vertical */
+    }
+
+    .timeline-item {
+        flex: 0 0 100%; /* Ajuste a largura dos itens para 100% */
+    }
+
+    .services-container {
+        flex-direction: column; /* Organize os serviços em colunas */
+        align-items: center; /* Centralize os serviços na vertical */
+    }
+
+    .depoimentos-container {
+        flex-direction: column; /* Organize os depoimentos em colunas */
+        align-items: center; /* Centralize os depoimentos na vertical */
+    }
+
+    .home-decor {
+        width: 50%; /* Ajuste a largura da imagem para 50% da tela */
+        max-width: 250px; /* Ajuste a largura máxima da imagem */
+        bottom: 10px; /* Ajuste a posição da imagem */
+        right: 10px; /* Ajuste a posição da imagem */
+    }
+
+    #home {
+        flex-direction: column; /* Organize os elementos do home em colunas */
+    }
+}
+
+/* Estilo para telas ainda menores (tablets) */
+@media (max-width: 500px) {
+    .profile-pic {
+        width: 150px; /* Diminui o tamanho da foto de perfil */
+        height: 150px; /* Diminui o tamanho da foto de perfil */
+    }
+
+    .social-icons {
+        flex-direction: column; /* Organize os ícones em colunas */
+        align-items: center; /* Centralize os ícones na vertical */
+    }
+
+    .name {
+        font-size: 2.5rem; /* Diminui o tamanho da fonte do nome */
+    }
+
+    .info h2 {
+        font-size: 1.5rem; /* Diminui o tamanho da fonte da profissão */
+    }
+
+    .home-description {
+        font-size: 1rem; /* Diminui o tamanho da fonte da descrição */
+    }
+
+    .course-item {
+        width: 100%; /* Ajuste a largura dos itens de cursos para 100% */
+    }
+
+    .service {
+        width: 100%; /* Ajuste a largura dos itens de serviços para 100% */
+    }
+
+    .depoimento {
+        width: 100%; /* Ajuste a largura dos itens de depoimentos para 100% */
+    }
+}
