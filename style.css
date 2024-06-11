@@ -2,13 +2,20 @@
    GENERAL STYLES
    ============================================================== */
 
-   body {
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5; /* Cor de fundo cinza claro */
     color: #333; /* Cor do texto cinza escuro */
     line-height: 1.6;
+    /* Adicione este estilo para evitar zoom */
+    -webkit-touch-callout: none; /* Desabilita o zoom no iOS */
+    -webkit-user-select: none; /* Desabilita o zoom no iOS */
+    -khtml-user-select: none; /* Desabilita o zoom no Konqueror */
+    -moz-user-select: none; /* Desabilita o zoom no Firefox */
+    -ms-user-select: none; /* Desabilita o zoom no IE 10+ */
+    user-select: none; /* Desabilita o zoom no Chrome, Edge, Opera */
 }
 
 header {
@@ -22,29 +29,48 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin-right: 2rem;
-}
-
-nav ul li a {
-    color: #333; /* Cor do texto cinza escuro */
-    text-decoration: none;
-    font-size: 0.9rem; /* Tamanho da fonte menor para os menus */
-    font-weight: 300;
-    transition: color 0.3s; /* Adiciona transição suave de cor */
-}
-
-nav ul li a:hover {
-    color: #d8b4f8; /* Muda a cor do link para lilás ao passar o mouse */
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+nav {
+    display: flex; /* Ajuste para flexbox */
+    justify-content: space-between; /* Distribui espaço igualmente entre o botão e o menu */
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    /* Estilos do botão de menu */
+    .menu-btn {
+        display: none; /* Esconde o botão em telas maiores */
+        background-color: transparent; /* Sem cor de fundo */
+        border: none; /* Sem borda */
+        cursor: pointer; /* Define o cursor como um ponteiro */
+        .menu-icon {
+            font-size: 2rem; /* Tamanho do ícone */
+            color: #333; /* Cor do ícone */
+        }
+    }
+    /* Estilos do menu */
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+        /* Esconde o menu em telas menores */
+        display: flex;
+    }
+    ul li {
+        margin-right: 0; /* Remove a margem direita dos itens */
+    }
+    ul li a {
+        color: #333; /* Cor do texto cinza escuro */
+        text-decoration: none;
+        font-size: 0.9rem; /* Tamanho da fonte menor para os menus */
+        font-weight: 300;
+        transition: color 0.3s; /* Adiciona transição suave de cor */
+    }
+    ul li a:hover {
+        color: #d8b4f8; /* Muda a cor do link para lilás ao passar o mouse */
+        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    }
 }
 
 /* Adiciona cor de fundo à aba do menu */
@@ -390,24 +416,6 @@ footer {
    ============================================================== */
 
 /* Ajusta o layout da seção "Formação" */
-.destaque-container {
-    display: flex;
-    justify-content: space-between; /* Distribui os cursos igualmente */
-    align-items: center; /* Alinha os cursos verticalmente */
-    margin-bottom: 2rem; /* Adiciona espaço entre os grupos de cursos */
-}
-
-.course-item.destaque.left {
-    margin-right: 2rem; /* Adiciona margem à direita do primeiro */
-}
-
-.course-item.destaque.center {
-    margin: 0; /* Remove margem do curso do meio */
-}
-
-.course-item.destaque.right {
-    margin-left: 2rem; /* Adiciona margem à esquerda do último */
-}
 
 .grid-container {
     display: grid;
@@ -442,7 +450,6 @@ footer {
 #resumo h2, #experiencia h2, #formacao h2, #servicos h2, #depoimentos h2 {
     font-size: 2.5rem;
 }
-
 
 /* Estilo para telas menores (celulares) */
 @media (max-width: 768px) { 
@@ -481,18 +488,31 @@ footer {
     }
     
     nav ul {
-        flex-direction: column; /* Alinha os itens do menu verticalmente */
-        align-items: flex-start; /* Alinha os itens à esquerda */
+        display: none; /* Esconde o menu em telas menores */
     }
-
-    nav ul li {
-        margin-right: 0; /* Remove a margem direita dos itens */
-        margin-bottom: 1rem; /* Adiciona margem inferior para espaçamento */
+    
+    nav .menu-btn {
+        display: block; /* Exibe o botão de menu em telas menores */
     }
-
-    nav ul li a {
+    
+    /* Estilos para o menu quando o botão é clicado */
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste a posição do menu */
+        left: 0;
+        width: 100%;
+        background-color: #d8b4f8;
+        z-index: 100; /* Define a camada acima do header */
+    }
+    nav ul.show li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    nav ul.show li a {
         display: block; /* Torna os links do menu como blocos */
-        padding: 0.5rem 0; /* Adiciona padding aos links */
+        padding: 0.5rem 1rem; /* Adiciona padding aos links */
     }
 }
 
