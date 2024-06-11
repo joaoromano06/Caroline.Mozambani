@@ -330,7 +330,7 @@ section {
     gap: 2rem;
     /* Ajusta a largura do contêiner para evitar que os itens ultrapassem a tela */
     width: 100%; 
-    max-width: 375px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
+    max-width: 350px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
 }
 
 .service {
@@ -341,7 +341,7 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
     width: 200px;
     /* Ajusta a largura máxima do serviço */
-    max-width: 300px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
+    max-width: 270px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
 }
 
 .service i {
@@ -367,7 +367,7 @@ section {
     gap: 2rem;
     /* Ajusta a largura do contêiner para evitar que os itens ultrapassem a tela */
     width: 100%; 
-    max-width: 375px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
+    max-width: 350px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
 }
 
 .depoimento {
@@ -378,7 +378,7 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
     width: 300px;
     /* Ajusta a largura máxima do depoimento */
-    max-width: 300px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
+    max-width: 270px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
 }
 
 .depoimento p {
