@@ -93,12 +93,13 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Diminui a altura da seção para 90vh */
-    padding: 2rem;
     background-color: #fff; /* Cor de fundo branca */
     color: #333; /* Cor do texto cinza escuro */
     position: relative; /* Permite posicionar elementos em relação ao #home */
     overflow: hidden; /* Oculta o conteúdo que excede as bordas do #home */
+    /* Defina dimensões fixas para a seção home */
+    width: 375px; /* Exemplo para um iPhone */
+    height: 667px; /* Exemplo para um iPhone */
 }
 
 .container {
@@ -235,7 +236,7 @@ section {
     gap: 2rem; /* Espaçamento entre a linha e os itens */
     position: relative; /* Para a linha branca cobrir toda a seção */
     z-index: 1; /* Garante que a linha fique acima dos itens */
-    flex-direction: row; /* Organiza os itens em linha */
+    flex-direction: column; /* Organiza os itens em coluna */
     width: 100%; /* Ocupa toda a largura da tela */
     margin-bottom: 2rem; /* Adiciona espaçamento entre a seção "Experiência" e "Formação" */
     flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
@@ -244,7 +245,7 @@ section {
 
 .timeline-items {
     display: flex;
-    flex-direction: row; /* Organiza os itens em linha */
+    flex-direction: column; /* Organiza os itens em coluna */
     gap: 2rem;
     width: 100%; /* Ocupa toda a largura da tela */
 }
@@ -254,9 +255,10 @@ section {
     color: #333; /* Cor do texto cinza escuro */
     text-align: left; 
     border-radius: 8px; /* Arredonda as bordas dos quadrados */
-    flex: 1; /* Distribui o espaço igualmente entre os itens */
+    /*  flex: 1; */ /*  Remova o flex: 1 */
     background-color: #fff; /* Cor de fundo branca */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    width: 100%; /* Ajuste a largura dos itens */
 }
 
 /* Ajusta a ordem dos itens */
