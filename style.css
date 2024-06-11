@@ -328,6 +328,9 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    /* Ajusta a largura do contêiner para evitar que os itens ultrapassem a tela */
+    width: 100%; 
+    max-width: 375px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
 }
 
 .service {
@@ -337,6 +340,8 @@ section {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
     width: 200px;
+    /* Ajusta a largura máxima do serviço */
+    max-width: 300px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
 }
 
 .service i {
@@ -360,6 +365,9 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    /* Ajusta a largura do contêiner para evitar que os itens ultrapassem a tela */
+    width: 100%; 
+    max-width: 375px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
 }
 
 .depoimento {
@@ -369,6 +377,8 @@ section {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
     width: 300px;
+    /* Ajusta a largura máxima do depoimento */
+    max-width: 300px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
 }
 
 .depoimento p {
@@ -471,19 +481,29 @@ footer {
     .services-container {
         flex-direction: column; /*  Organiza em coluna */
         align-items: center;
+        /* Ajusta a largura do contêiner para evitar que os itens ultrapassem a tela */
+        width: 100%; 
+        max-width: 375px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
     }
 
     .service {
         width: 100%; /* Ajuste a largura para 100% */
+        /* Ajusta a largura máxima do serviço */
+        max-width: 300px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
     }
 
     .depoimentos-container {
         flex-direction: column; /* Organiza em coluna */
         align-items: center;
+        /* Ajusta a largura do contêiner para evitar que os itens ultrapassem a tela */
+        width: 100%; 
+        max-width: 375px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
     }
 
     .depoimento {
         width: 100%; /* Ajuste a largura para 100% */
+        /* Ajusta a largura máxima do depoimento */
+        max-width: 300px; /* Exemplo para tela de iPhone, ajuste conforme necessário */
     }
 
     .home-decor {
