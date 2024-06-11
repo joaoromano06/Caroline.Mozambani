@@ -479,6 +479,21 @@ footer {
     #home {
         flex-direction: column; /* Organize os elementos do home em colunas */
     }
+    
+    nav ul {
+        flex-direction: column; /* Alinha os itens do menu verticalmente */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    nav ul li {
+        margin-right: 0; /* Remove a margem direita dos itens */
+        margin-bottom: 1rem; /* Adiciona margem inferior para espaçamento */
+    }
+
+    nav ul li a {
+        display: block; /* Torna os links do menu como blocos */
+        padding: 0.5rem 0; /* Adiciona padding aos links */
+    }
 }
 
 /* Estilo para telas ainda menores (tablets) */
