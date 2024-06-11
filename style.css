@@ -2,7 +2,7 @@
    GENERAL STYLES
    ============================================================== */
 
-body {
+   body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -90,122 +90,124 @@ section {
    ============================================================== */
 
 #home {
-    display: flex;
+    /* Remove as dimensões fixas */
+    /* width: 375px;  */ 
+    /* height: 667px; */
+
+    display: flex; /* Define o display como flex para organizar os elementos */
     justify-content: center;
     align-items: center;
     background-color: #fff; /* Cor de fundo branca */
     color: #333; /* Cor do texto cinza escuro */
     position: relative; /* Permite posicionar elementos em relação ao #home */
     overflow: hidden; /* Oculta o conteúdo que excede as bordas do #home */
-    /* Defina dimensões fixas para a seção home */
-    width: 375px; /* Exemplo para um iPhone */
-    height: 667px; /* Exemplo para um iPhone */
+    min-height: 100vh; /* Define a altura mínima como 100% da viewport */
+}
 
-    /* Estilos para o conteúdo da tela inicial */
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 50%; /* Define a largura do container para 50% da tela */
-        max-width: 500px; /* Define a largura máxima do container */
-    }
+/* Estilos para o conteúdo da tela inicial */
+#home .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%; /* Define a largura do container para 50% da tela */
+    max-width: 500px; /* Define a largura máxima do container */
+}
 
-    .profile-pic {
-        margin-bottom: 2rem; /* Adiciona espaçamento entre a foto e o nome */
-        position: relative;
-        width: 250px; /* Aumenta a largura da foto */
-        height: 250px; /* Aumenta a altura da foto */
-        margin: 0 auto;
-    }
+.profile-pic {
+    margin-bottom: 2rem; /* Adiciona espaçamento entre a foto e o nome */
+    position: relative;
+    width: 250px; /* Aumenta a largura da foto */
+    height: 250px; /* Aumenta a altura da foto */
+    margin: 0 auto;
+}
 
-    .profile-pic img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 5px solid #d8b4f8; /* Cor lilás para o contorno da foto */
-        display: block; /* Faz com que a imagem seja um bloco */
-        margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    }
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #d8b4f8; /* Cor lilás para o contorno da foto */
+    display: block; /* Faz com que a imagem seja um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
 
-    .name {
-        font-size: 3.5rem; /* Aumenta o tamanho da fonte do nome */
-        margin-bottom: 0.5rem; /* Diminui o espaçamento entre o nome e a profissão */
-        font-weight: 600; /* Define o peso da fonte como "sem negrito" */
-    }
+.name {
+    font-size: 3.5rem; /* Aumenta o tamanho da fonte do nome */
+    margin-bottom: 0.5rem; /* Diminui o espaçamento entre o nome e a profissão */
+    font-weight: 600; /* Define o peso da fonte como "sem negrito" */
+}
 
-    .info h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem; /* Diminui o espaçamento entre a profissão e a descrição */
-        font-weight: 300;
-    }
+.info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem; /* Diminui o espaçamento entre a profissão e a descrição */
+    font-weight: 300;
+}
 
-    .home-description {
-        max-width: 600px; /* Define a largura máxima da descrição */
-        text-align: center; /* Centraliza a descrição */
-        margin-bottom: 2rem; /* Adiciona espaçamento entre a descrição e os ícones de mídia social */
-    }
+.home-description {
+    max-width: 600px; /* Define a largura máxima da descrição */
+    text-align: center; /* Centraliza a descrição */
+    margin-bottom: 2rem; /* Adiciona espaçamento entre a descrição e os ícones de mídia social */
+}
 
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 2rem; /* Adiciona espaçamento entre os ícones e os detalhes de contato */
-    }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem; /* Adiciona espaçamento entre os ícones e os detalhes de contato */
+}
 
-    .social-icons a {
-        color: #333; /* Cor do texto cinza escuro */
-        font-size: 2rem;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
+.social-icons a {
+    color: #333; /* Cor do texto cinza escuro */
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-    .social-icons a:hover {
-        color: #d8b4f8; /* Cor lilás ao passar o mouse */
-    }
+.social-icons a:hover {
+    color: #d8b4f8; /* Cor lilás ao passar o mouse */
+}
 
-    .home-cta {
-        margin-bottom: 2rem;
-    }
+.home-cta {
+    margin-bottom: 2rem;
+}
 
-    .btn {
-        background-color: #d8b4f8; /* Cor de fundo lilás para o botão */
-        color: #fff; /* Cor do texto branca */
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background-color 0.3s; /* Adiciona transição suave de cor de fundo */
-        display: inline-block; /* Define o botão como um bloco inline */
-    }
+.btn {
+    background-color: #d8b4f8; /* Cor de fundo lilás para o botão */
+    color: #fff; /* Cor do texto branca */
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Adiciona transição suave de cor de fundo */
+    display: inline-block; /* Define o botão como um bloco inline */
+}
 
-    .btn:hover {
-        background-color: #c4a5e4; /* Cor de fundo lilás mais escuro ao passar o mouse */
-        cursor: pointer; /* Define o cursor como um ponteiro ao passar o mouse */
-    }
+.btn:hover {
+    background-color: #c4a5e4; /* Cor de fundo lilás mais escuro ao passar o mouse */
+    cursor: pointer; /* Define o cursor como um ponteiro ao passar o mouse */
+}
 
-    .home-decor {
-        position: absolute; /* Posiciona a imagem em relação ao #home */
-        bottom: 0; /* Posiciona a imagem na parte inferior da tela */
-        right: 0; /* Posiciona a imagem na parte direita da tela */
-        width: 30%; /* Define a largura da imagem */
-        max-width: 300px; /* Define a largura máxima da imagem */
-    }
+.home-decor {
+    position: absolute; /* Posiciona a imagem em relação ao #home */
+    bottom: 0; /* Posiciona a imagem na parte inferior da tela */
+    right: 0; /* Posiciona a imagem na parte direita da tela */
+    width: 30%; /* Define a largura da imagem */
+    max-width: 300px; /* Define a largura máxima da imagem */
+}
 
-    .home-decor img {
-        width: 100%; /* A imagem ocupa toda a largura do elemento */
-        height: auto; /* A altura da imagem é ajustada automaticamente para manter as proporções */
-    }
+.home-decor img {
+    width: 100%; /* A imagem ocupa toda a largura do elemento */
+    height: auto; /* A altura da imagem é ajustada automaticamente para manter as proporções */
+}
 
-    .home-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(216, 180, 248, 0.7); /* Lilás transparente */
-        z-index: -1; /* Define a camada atrás dos outros elementos */
-    }
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(216, 180, 248, 0.7); /* Lilás transparente */
+    z-index: -1; /* Define a camada atrás dos outros elementos */
 }
 
 /* ==============================================================
