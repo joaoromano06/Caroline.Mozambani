@@ -469,13 +469,21 @@ footer {
     }
 
     .services-container {
-        flex-direction: column; /* Organize os serviços em colunas */
-        align-items: center; /* Centralize os serviços na vertical */
+        flex-direction: column; /*  Organiza em coluna */
+        align-items: center;
+    }
+
+    .service {
+        width: 100%; /* Ajuste a largura para 100% */
     }
 
     .depoimentos-container {
-        flex-direction: column; /* Organize os depoimentos em colunas */
-        align-items: center; /* Centralize os depoimentos na vertical */
+        flex-direction: column; /* Organiza em coluna */
+        align-items: center;
+    }
+
+    .depoimento {
+        width: 100%; /* Ajuste a largura para 100% */
     }
 
     .home-decor {
@@ -515,6 +523,12 @@ footer {
     nav ul.show li a {
         display: block; /* Torna os links do menu como blocos */
         padding: 0.5rem 1rem; /* Adiciona padding aos links */
+    }
+
+    .social-icons {
+        flex-direction: row; /* Alinha os ícones em linha */
+        justify-content: center; /* Centraliza os ícones */
+        gap: 1rem;
     }
 }
 
